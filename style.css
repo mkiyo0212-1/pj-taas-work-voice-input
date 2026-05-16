@@ -69,13 +69,40 @@ html, body {
 }
 
 .beta-badge {
-  margin-left: auto;
   background: rgba(255,255,255,0.2);
   font-size: 0.7rem;
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 99px;
   letter-spacing: 0.05em;
+}
+
+.header-user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.logout-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.25);
 }
 
 /* ===== Chat Area ===== */

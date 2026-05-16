@@ -1,12 +1,20 @@
 'use strict';
 
 // ===== DOM refs =====
-const messageList = document.getElementById('messageList');
-const chatArea    = document.getElementById('chatArea');
+const messageList  = document.getElementById('messageList');
+const chatArea     = document.getElementById('chatArea');
 const messageInput = document.getElementById('messageInput');
-const sendBtn     = document.getElementById('sendBtn');
-const voiceBtn    = document.getElementById('voiceBtn');
-const voiceStatus = document.getElementById('voiceStatus');
+const sendBtn      = document.getElementById('sendBtn');
+const voiceBtn     = document.getElementById('voiceBtn');
+const voiceStatus  = document.getElementById('voiceStatus');
+const logoutBtn    = document.getElementById('logoutBtn');
+const userNameEl   = document.getElementById('userName');
+
+// ===== Logout =====
+logoutBtn.addEventListener('click', async () => {
+  await fetch('/api/logout', { method: 'POST' });
+  window.location.href = '/login.html';
+});
 
 // ===== Auto-resize textarea =====
 messageInput.addEventListener('input', () => {
