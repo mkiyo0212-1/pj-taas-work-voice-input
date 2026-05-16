@@ -1,8 +1,11 @@
 // 認証ミドルウェア: 未ログインユーザーを /login.html へリダイレクト
 
+// Cloudflare Pages の Pretty URLs により .html が除去されるため両方許可
 const PUBLIC_PATHS = new Set([
   '/login.html',
+  '/login',
   '/register.html',
+  '/register',
   '/api/login',
   '/api/register',
 ]);
